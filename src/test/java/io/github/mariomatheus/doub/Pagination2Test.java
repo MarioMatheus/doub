@@ -1,4 +1,4 @@
-package com.github.mariomatheus.doub;
+package io.github.mariomatheus.doub;
 
 import static com.github.mariomatheus.doub.util.Sub.queryList;
 
@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.github.mariomatheus.doub.util.DPage;
-
+import io.github.mariomatheus.doub.util.DPage;
 import junit.framework.TestCase;
 
 public class Pagination2Test extends TestCase {

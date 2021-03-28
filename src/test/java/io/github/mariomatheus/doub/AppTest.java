@@ -1,4 +1,4 @@
-package com.github.mariomatheus.doub;
+package io.github.mariomatheus.doub;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

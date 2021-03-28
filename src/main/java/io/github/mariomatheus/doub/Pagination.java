@@ -1,4 +1,4 @@
-package com.github.mariomatheus.doub;
+package io.github.mariomatheus.doub;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 
 import javax.xml.ws.Holder;
 
-import com.github.mariomatheus.doub.util.DPage;
-import com.github.mariomatheus.doub.util.Pair;
+import io.github.mariomatheus.doub.util.DPage;
+import io.github.mariomatheus.doub.util.Pair;
 
 /**
  * A multiplexed pagination builder.
@@ -97,7 +97,7 @@ public final class Pagination<T> {
 	 * 
 	 * @param pageNumber Number of page
 	 * @param pageSize   Size of page
-	 * @return {@link com.github.mariomatheus.doub.util.DPage} object with page data
+	 * @return {@link io.github.mariomatheus.doub.util.DPage} object with page data
 	 */
 	public DPage<T> paginate(Integer pageNumber, Integer pageSize) {
 		Holder<Integer> pageFillHolder = new Holder<>(0);

@@ -1,4 +1,4 @@
-package com.github.mariomatheus.doub.util;
+package io.github.mariomatheus.doub.util;
 
 public class Pair<F, S> {
 	

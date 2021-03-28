@@ -1,9 +1,9 @@
-package com.github.mariomatheus.doub.util;
+package io.github.mariomatheus.doub.util;
 
 import java.util.List;
 
 /**
- * Page object managed by {@link com.github.mariomatheus.doub.Pagination}
+ * Page object managed by {@link io.github.mariomatheus.doub.Pagination}
  * with general pagination info and element content
  * 
  * @author mariomatheus

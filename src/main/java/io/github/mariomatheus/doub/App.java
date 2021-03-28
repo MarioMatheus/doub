@@ -1,4 +1,4 @@
-package com.github.mariomatheus.doub;
+package io.github.mariomatheus.doub;
 
 public class App {
 	
