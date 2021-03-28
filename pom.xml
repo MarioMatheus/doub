@@ -7,7 +7,7 @@
 
 	<groupId>io.github.mariomatheus</groupId>
 	<artifactId>doub</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 
 	<name>doub</name>
 	<description>Mux Pagination Library</description>
