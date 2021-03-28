@@ -5,7 +5,7 @@
 
 	<groupId>io.github.mariomatheus</groupId>
 	<artifactId>doub</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 
 	<name>doub</name>
 	<description>Mux Pagination Library</description>
@@ -32,7 +32,7 @@
 		<url>https://github.com/MarioMatheus/doub</url>
 		<connection>scm:git:git://github.com/MarioMatheus/doub.git</connection>
 		<developerConnection>scm:git:git@github.com:MarioMatheus/doub.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>doub-0.0.1</tag>
 	</scm>
 
 	<dependencies>
