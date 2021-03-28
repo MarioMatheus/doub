@@ -30,6 +30,12 @@
 		</repository>
 	</distributionManagement>
 
+	<scm>
+		<url>https://github.com/MarioMatheus/doub</url>
+		<connection>scm:git:git://github.com/MarioMatheus/doub.git</connection>
+		<developerConnection>scm:git:git@github.com:MarioMatheus/doub.git</developerConnection>
+	</scm>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -91,6 +97,17 @@
 							</goals>
 						</execution>
 					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5.3</version>
+					<configuration>
+						<autoVersionSubmodules>true</autoVersionSubmodules>
+						<useReleaseProfile>false</useReleaseProfile>
+						<releaseProfiles>release</releaseProfiles>
+						<goals>deploy</goals>
+					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
