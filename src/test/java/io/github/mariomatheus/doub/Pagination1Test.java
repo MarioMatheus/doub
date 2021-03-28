@@ -1,6 +1,6 @@
 package io.github.mariomatheus.doub;
 
-import static com.github.mariomatheus.doub.util.Sub.queryList;
+import static io.github.mariomatheus.doub.util.Sub.queryList;
 
 import java.util.Arrays;
 import java.util.Collections;
