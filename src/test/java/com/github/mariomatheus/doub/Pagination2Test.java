@@ -1,6 +1,6 @@
-package com.github.mariomatheus.doub.pagination;
+package com.github.mariomatheus.doub;
 
-import static com.github.mariomatheus.doub.pagination.util.Sub.queryList;
+import static com.github.mariomatheus.doub.util.Sub.queryList;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.github.mariomatheus.doub.Pagination;
 import com.github.mariomatheus.doub.util.DPage;
 
 import junit.framework.TestCase;
@@ -36,6 +35,7 @@ public class Pagination2Test extends TestCase {
 		DPage<String> result = pagination.paginate(0, 10);
 		
 		defaultAssert(result);
+		assertEquals(result.getTotalPages().intValue(), 1);
 		assertTrue(result.getContent().equals(mergedList));
 		assertEquals(result.getContent().size(), mergedList.size());
 	}
@@ -44,6 +44,7 @@ public class Pagination2Test extends TestCase {
 		DPage<String> result = pagination.paginate(0, 4);
 		
 		defaultAssert(result);
+		assertEquals(result.getTotalPages().intValue(), 2);
 		assertTrue(result.getContent().equals(mergedList.subList(0, 4)));
 		assertEquals(result.getContent().size(), 4);
 	}
@@ -52,8 +53,27 @@ public class Pagination2Test extends TestCase {
 		DPage<String> result = pagination.paginate(1, 4);
 		
 		defaultAssert(result);
+		assertEquals(result.getTotalPages().intValue(), 2);
 		assertTrue(result.getContent().equals(mergedList.subList(4, 6)));
 		assertEquals(result.getContent().size(), 2);
 	}
 	
+	public void testPage2Size2() {
+		DPage<String> result = pagination.paginate(1, 2);
+		
+		defaultAssert(result);
+		assertEquals(result.getTotalPages().intValue(), 3);
+		assertTrue(result.getContent().equals(mergedList.subList(2, 4)));
+		assertEquals(result.getContent().size(), 2);
+	}
+	
+	public void testPage3Size2() {
+		DPage<String> result = pagination.paginate(2, 2);
+		
+		defaultAssert(result);
+		assertEquals(result.getTotalPages().intValue(), 3);
+		assertTrue(result.getContent().equals(mergedList.subList(4, 6)));
+		assertEquals(result.getContent().size(), 2);
+	}
+
 }

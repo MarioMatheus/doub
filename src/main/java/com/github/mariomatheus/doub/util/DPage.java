@@ -6,6 +6,7 @@ public class DPage <T> {
 	
 	private List<T> content;
 	private Integer totalElements;
+	private Integer totalPages;
 	private Integer pageNumber;
 	private Integer pageSize;
 	
@@ -24,6 +25,15 @@ public class DPage <T> {
 	
 	public DPage<T> setTotalElements(Integer totalElements) {
 		this.totalElements = totalElements;
+		return this;
+	}
+
+	public Integer getTotalPages() {
+		return totalPages;
+	}
+
+	public DPage<T> setTotalPages(Integer totalPages) {
+		this.totalPages = totalPages;
 		return this;
 	}
 

@@ -1,4 +1,4 @@
-package com.github.mariomatheus.doub.pagination.util;
+package com.github.mariomatheus.doub.util;
 
 import java.util.List;
 

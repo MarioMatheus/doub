@@ -1,12 +1,11 @@
-package com.github.mariomatheus.doub.pagination;
+package com.github.mariomatheus.doub;
 
-import static com.github.mariomatheus.doub.pagination.util.Sub.queryList;
+import static com.github.mariomatheus.doub.util.Sub.queryList;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import com.github.mariomatheus.doub.Pagination;
 import com.github.mariomatheus.doub.util.DPage;
 
 import junit.framework.TestCase;
@@ -27,6 +26,7 @@ public class Pagination1Test extends TestCase {
 		DPage<String> result = pagination.paginate(0, 10);
 		
 		defaultAssert(result);
+		assertEquals(result.getTotalPages().intValue(), 1);
 		assertTrue(result.getContent().equals(uniqueList));
 		assertEquals(result.getContent().size(), uniqueList.size());
 	}
@@ -35,6 +35,7 @@ public class Pagination1Test extends TestCase {
 		DPage<String> result = pagination.paginate(1, 10);
 		
 		defaultAssert(result);
+		assertEquals(result.getTotalPages().intValue(), 1);
 		assertTrue(result.getContent().equals(Collections.emptyList()));
 		assertEquals(result.getContent().size(), 0);
 	}
@@ -44,6 +45,7 @@ public class Pagination1Test extends TestCase {
 		DPage<String> result = pagination.paginate(0, 2);
 		
 		defaultAssert(result);
+		assertEquals(result.getTotalPages().intValue(), 2);
 		assertTrue(result.getContent().equals(uniqueList.subList(0, 2)));
 		assertEquals(result.getContent().size(), 2);
 	}
@@ -52,6 +54,34 @@ public class Pagination1Test extends TestCase {
 		DPage<String> result = pagination.paginate(1, 2);
 		
 		defaultAssert(result);
+		assertEquals(result.getTotalPages().intValue(), 2);
+		assertTrue(result.getContent().equals(uniqueList.subList(2, 3)));
+		assertEquals(result.getContent().size(), 1);
+	}
+	
+	public void testPage1Size1() {
+		DPage<String> result = pagination.paginate(0, 1);
+		
+		defaultAssert(result);
+		assertEquals(result.getTotalPages().intValue(), 3);
+		assertTrue(result.getContent().equals(uniqueList.subList(0, 1)));
+		assertEquals(result.getContent().size(), 1);
+	}
+	
+	public void testPage2Size1() {
+		DPage<String> result = pagination.paginate(1, 1);
+		
+		defaultAssert(result);
+		assertEquals(result.getTotalPages().intValue(), 3);
+		assertTrue(result.getContent().equals(uniqueList.subList(1, 2)));
+		assertEquals(result.getContent().size(), 1);
+	}
+	
+	public void testPage3Size2() {
+		DPage<String> result = pagination.paginate(2, 1);
+		
+		defaultAssert(result);
+		assertEquals(result.getTotalPages().intValue(), 3);
 		assertTrue(result.getContent().equals(uniqueList.subList(2, 3)));
 		assertEquals(result.getContent().size(), 1);
 	}
