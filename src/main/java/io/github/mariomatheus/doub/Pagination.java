@@ -36,8 +36,8 @@ import io.github.mariomatheus.doub.util.Pair;
  * <pre>
  * <code>
  * new Pagination()
- *   .put(fooTotalElements, (offset, limit) -> repository.findFooByOffsetAndLimit(offset, limit))
- *   .put(barTotalElements, (offset, limit) -> service.requestBarByOffsetAndLimit(offset, limit))
+ *   .put(fooTotalElements, (offset, limit) -&#62; repository.findFooByOffsetAndLimit(offset, limit))
+ *   .put(barTotalElements, (offset, limit) -&#62; service.requestBarByOffsetAndLimit(offset, limit))
  *   .paginate(0, 10)
  *   .getContent();
  * </code>
@@ -73,8 +73,8 @@ public final class Pagination<T> {
 	 * <pre>
 	 * <code>
 	 * new Pagination()
-	 *   .put(fooTotalElements, (offset, limit) -> repository.findFooByOffsetAndLimit(offset, limit))
-	 *   .put(barTotalElements, (offset, limit) -> service.requestBarByOffsetAndLimit(offset, limit));
+	 *   .put(fooTotalElements, (offset, limit) -&#62; repository.findFooByOffsetAndLimit(offset, limit))
+	 *   .put(barTotalElements, (offset, limit) -&#62; service.requestBarByOffsetAndLimit(offset, limit));
 	 * </code>
 	 * </pre>
 	 * 
