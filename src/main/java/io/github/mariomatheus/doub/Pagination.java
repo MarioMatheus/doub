@@ -7,9 +7,8 @@ import java.util.List;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
 
-import javax.xml.ws.Holder;
-
 import io.github.mariomatheus.doub.util.DPage;
+import io.github.mariomatheus.doub.util.Holder;
 import io.github.mariomatheus.doub.util.Pair;
 
 /**
