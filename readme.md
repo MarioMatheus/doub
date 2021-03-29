@@ -49,6 +49,12 @@ List<FooBar> content = pagination
     .getContent();
 ```
 
+## Pagination Scheme
+
+<p align="center">
+    <img height="450" src="doub-scheme.png">
+</p>
+
 ## License
 
 See more details in Apache [LICENSE](LICENSE).
