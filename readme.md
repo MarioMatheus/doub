@@ -7,6 +7,12 @@ Doub allows you to build an object pager with different origins.
 The main functionality is to provide a common pagination between the objects managed by different processes,
 distributing the requisition of resources in an intelligent way.
 
+## Pagination Scheme
+
+<p align="center">
+    <img height="450" src="doub-scheme.png">
+</p>
+
 ## Installing
 
 1. Add to pom.xml file
@@ -48,12 +54,6 @@ List<FooBar> content = pagination
     .paginate(0, 10)
     .getContent();
 ```
-
-## Pagination Scheme
-
-<p align="center">
-    <img height="450" src="doub-scheme.png">
-</p>
 
 ## License
 
