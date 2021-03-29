@@ -25,7 +25,7 @@ distributing the requisition of resources in an intelligent way.
 mvn install
 ```
 
-### Using
+## Using
 
 To build the pagination, it is necessary to provide two resources to the
 `Pagination` object through the `put` method, the total number of
@@ -35,12 +35,12 @@ calculated internally and used as arguments of this function for the data
 recovery.
 
 ```java
-Pagination<FooBar> pagination = new Pagination()
+Pagination<FooBar> pagination = new Pagination<>()
     .put(fooTotalElements, (offset, limit) -> repository.findFooByOffsetAndLimit(offset, limit))
     .put(barTotalElements, (offset, limit) -> service.requestBarByOffsetAndLimit(offset, limit));
 ```
 
-After the construction of the `Pagination` object, the paginate
+After the construction of the `Pagination` object, the `paginate`
 function is used to request the objects in a unified and transparent way.
 
 ```java
