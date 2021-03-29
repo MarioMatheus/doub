@@ -1,5 +1,6 @@
 # Doub - Mux Pagination Library
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.mariomatheus/doub.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.github.mariomatheus%22%20AND%20a:%22doub%22)
 
 Doub allows you to build an object pager with different origins.
