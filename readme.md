@@ -10,7 +10,7 @@ distributing the requisition of resources in an intelligent way.
 ## Pagination Scheme
 
 <p align="center">
-    <img height="450" src="doub-scheme.png">
+    <img src="doub-scheme.png">
 </p>
 
 ## Installing
